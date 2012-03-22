@@ -25,8 +25,7 @@ File: application/views/recaptcha.php
     <form method="post">
         <?= $recaptcha ?>
         <input type="submit" value="Submit" />
-
-w    </form>
+    </form>
 ### Example controller file
 
 File: application/controllers/recaptcha.php
