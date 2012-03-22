@@ -6,3 +6,4 @@
 
  
 $autoload['libraries']  = array('Recaptcha');
+$autoload['helper']  = array('recaptcha');

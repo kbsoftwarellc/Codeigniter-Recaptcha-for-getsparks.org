@@ -25,8 +25,8 @@ File: application/views/recaptcha.php
     <form method="post">
         <?= $recaptcha ?>
         <input type="submit" value="Submit" />
-    </form>
 
+w    </form>
 ### Example controller file
 
 File: application/controllers/recaptcha.php
@@ -36,7 +36,7 @@ File: application/controllers/recaptcha.php
         public function index()
         {
             $this->load->library('form_validation');
-            $this->load->spark('recaptcha_spark/1.0.11');
+            $this->load->spark('recaptcha_spark/1.0.13');
 
             if ($this->form_validation->run())
             {
@@ -47,4 +47,14 @@ File: application/controllers/recaptcha.php
                 $this->load->view('recaptcha', array('recaptcha' => $this->recaptcha->get_html()));
             }
         }
+        
+        public function check_captcha($val) 
+        {
+            return check_captcha($val);
+        }
     }
+    
+Please note the public function check_captcha simply refers to the check_captcha in the 
+helper class. I could not find a way around this at this point. The callback system for
+form_validation I believe only calls back $this-> {function_name} and I couldn't come
+up with a better solution. If you have any ideas please leave comments.
