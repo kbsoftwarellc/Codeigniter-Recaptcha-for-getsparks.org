@@ -21,34 +21,30 @@ key into the file.
 
 File: application/views/recaptcha.php
 
-```
-<?= validation_errors() ?>
-<form method="post">
-    <?= $recaptcha ?>
-    <input type="submit" value="Submit" />
-</form>
-```
+    <?= validation_errors() ?>
+    <form method="post">
+        <?= $recaptcha ?>
+        <input type="submit" value="Submit" />
+    </form>
 
 ### Example controller file
 
 File: application/controllers/recaptcha.php
 
-```
-class Recaptcha extends CI_Controller
-{
-   public function index()
-   {
-       $this->load->library('form_validation');
-       $this->load->spark('recaptcha_spark/1.0.11');
+    class Recaptcha extends CI_Controller
+    {
+        public function index()
+        {
+            $this->load->library('form_validation');
+            $this->load->spark('recaptcha_spark/1.0.11');
 
-      if ($this->form_validation->run())
-       {
-           //Do Success Stuff
-       }
-       else
-       {
-           $this->load->view('recaptcha', array('recaptcha' => $this->recaptcha->get_html()));
-       }
-   }
-}
-```
+            if ($this->form_validation->run())
+            {
+                //Do Success Stuff
+            }
+            else
+            {
+                $this->load->view('recaptcha', array('recaptcha' => $this->recaptcha->get_html()));
+            }
+        }
+    }
