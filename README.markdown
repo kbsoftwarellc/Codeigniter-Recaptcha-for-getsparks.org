@@ -21,7 +21,8 @@ key into the file.
 
 File: application/views/recaptcha.php
 
-```<?= validation_errors() ?>
+```html
+<?= validation_errors() ?>
 <form method="post">
     <?= $recaptcha ?>
     <input type="submit" value="Submit" />
