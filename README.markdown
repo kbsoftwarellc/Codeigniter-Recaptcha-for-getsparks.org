@@ -31,7 +31,7 @@ File: application/views/recaptcha.php
 
 ### Example controller file
 
-File application/controllers/recaptcha.php
+File: application/controllers/recaptcha.php
 
 ```
 class Recaptcha extends CI_Controller
@@ -39,7 +39,7 @@ class Recaptcha extends CI_Controller
    public function index()
    {
        $this->load->library('form_validation');
-       $this->load->spark('recaptcha_spark/1.0.5');
+       $this->load->spark('recaptcha_spark/1.0.10');
 
       if ($this->form_validation->run())
        {
