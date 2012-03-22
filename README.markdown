@@ -21,11 +21,11 @@ key into the file.
 
 File: application/views/recaptcha.php
 
-`<?= validation_errors() ?>`
-`<form method="post">`
-`    <?= $recaptcha ?>`
-`    <input type="submit" value="Submit" />`
-`</form>`
+`<?= validation_errors() ?>
+<form method="post">
+    <?= $recaptcha ?>
+    <input type="submit" value="Submit" />
+</form>`
 
 ### Example controller file
 
