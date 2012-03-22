@@ -39,7 +39,7 @@ class Recaptcha extends CI_Controller
    public function index()
    {
        $this->load->library('form_validation');
-       $this->load->spark('recaptcha_spark/1.0.10');
+       $this->load->spark('recaptcha_spark/1.0.11');
 
       if ($this->form_validation->run())
        {
