@@ -21,7 +21,7 @@ key into the file.
 
 File: application/views/recaptcha.php
 
-```php
+```html
 <?= validation_errors() ?>
 <form method="post">
     <?= $recaptcha ?>
@@ -33,7 +33,7 @@ File: application/views/recaptcha.php
 
 File application/controllers/recaptcha.php
 
-```php
+```html
 class Recaptcha extends CI_Controller
 {
    public function index()
