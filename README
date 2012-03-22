@@ -35,7 +35,7 @@ File application/controllers/recaptcha.php
 '   public function index()
 '   {
 '       $this->load->library('form_validation');
-'       $this->load->spark('recaptcha_spark/1.0.4');
+'       $this->load->spark('recaptcha_spark/1.0.5');
 '
 '       if ($this->form_validation->run())
 '       {
